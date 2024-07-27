@@ -1,4 +1,4 @@
-//inserting the images
+//Gowthamaraman Chess Game Website :
 function insertImage() {
     document.querySelectorAll('.box').forEach(image => {
         if (image.innerText.length !== 0) {
@@ -15,7 +15,7 @@ function insertImage() {
 }
 insertImage()
 
-//Coloring the board
+
 
 function coloring() {
     const color = document.querySelectorAll('.box')
@@ -39,7 +39,6 @@ function coloring() {
 coloring()
 
 
-//function to not remove the same team element
 
 function reddish() {
     document.querySelectorAll('.box').forEach(i1 => {
@@ -77,7 +76,7 @@ function reddish() {
     })
 }
 
-//reset button
+
 document.getElementById("reset-btn").addEventListener("click", function () {
     location.reload();
 });
@@ -121,10 +120,10 @@ document.querySelectorAll('.box').forEach(item => {
         aup = eval(arr.join(''))
         a = aside + aup
 
-        //function to display the available paths for all pieces
+        
 
         function whosTurn(toggle) {
-            // PAWN
+            
 
             if (item.innerText == `${toggle}pawn`) {
                 item.style.backgroundColor = 'blue';
@@ -146,7 +145,7 @@ document.querySelectorAll('.box').forEach(item => {
                 }
 
                 if (tog % 2 == 0 && aup > 100) {
-                    // First move for black pawns
+                    
                     if (document.getElementById(`b${a - 100}`).innerText.length == 0) {
                         document.getElementById(`b${a - 100}`).style.backgroundColor = 'greenyellow';
                         if (document.getElementById(`b${a - 200}`).innerText.length == 0 && aup > 600) {
@@ -160,7 +159,7 @@ document.querySelectorAll('.box').forEach(item => {
                         document.getElementById(`b${a - 100 - 1}`).style.backgroundColor = 'greenyellow';
                     }
                 }
-                // Second move for pawns
+        
                 if (tog % 2 !== 0 && aup >= 800) {
                     if (document.getElementById(`b${a + 100}`).innerText.length == 0) {
                         document.getElementById(`b${a + 100}`).style.backgroundColor = 'greenyellow';
